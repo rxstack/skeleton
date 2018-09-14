@@ -1,0 +1,100 @@
+{
+  "name": "RxStackSkeletonApplication",
+  "version": "0.1.0",
+  "description": "RxStack Skeleton - a fully functional application that you can use as the skeleton for your new applications.",
+  "private": true,
+  "author": "Nikolay Gergiev <symfonist@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rxstack/skeleton.git"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "rxstack"
+  ],
+  "main": "dist/index",
+  "typings": "dist/index",
+  "scripts": {
+    "prod": "npm install && npm run clean && npm run compile && NODE_ENV=production node ./dist/index.js",
+    "dev": "NODE_ENV=development nodemon & npm run watch",
+    "cli": "RXSTACK_CLI=true node ./dist/index.js --",
+    "compile": "npm run clean && tsc -p .",
+    "watch": "tsc -w -p .",
+    "clean": "rm -rf dist",
+    "lint": "tslint --project tsconfig.json --format stylish",
+    "mocha": "NODE_ENV=testing mocha --opts mocha.opts",
+    "coverage": "nyc npm run mocha",
+    "test": "npm run lint && npm run coverage"
+  },
+  "dependencies": {
+    "@rxstack/async-event-dispatcher": "^0.1",
+    "@rxstack/configuration": "^0.1",
+    "@rxstack/core": "^0.1",
+    "@rxstack/exceptions": "^0.1",
+    "@rxstack/express-server": "^0.1",
+    "@rxstack/socketio-server": "^0.1",
+    "@types/express": "^4.11.1",
+    "chalk": "^2.4.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "injection-js": "^2.1.0",
+    "reflect-metadata": "^0.1",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/lodash": "^4.14.108",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^7.0.60",
+    "@types/serve-static": "^1.7",
+    "@types/sinon": "^5.0.2",
+    "chai": "3.5.0",
+    "istanbul": "0.4.5",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "nyc": "^11.0.3",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "should": "^13.2.3",
+    "sinon": "^6.2.0",
+    "socket.io-client": "^2.1.1",
+    "source-map-support": "^0.4.15",
+    "ts-node": "^3.1.0",
+    "tslint": "^5.9.1",
+    "typescript": "^3.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/rxstack/skeleton/issues"
+  },
+  "homepage": "https://github.com/rxstack/skeleton",
+  "nodemonConfig": {
+    "ignore": [
+      "test/*"
+    ],
+    "delay": "1000"
+  },
+  "nyc": {
+    "include": [
+      "./src/**/*.ts"
+    ],
+    "exclude": [
+      "./test/**/*.spec.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html",
+      "lcov"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  }
+}

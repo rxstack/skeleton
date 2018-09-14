@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    app:
+        command: npm run prod
+        build:
+            context: ./app
+        ports:
+            - ${EXPRESS_PORT}:3000
+            - ${SOCKETIO_PORT}:4000
+        volumes:
+            - ${APP_PATH}:/var/www/application
+
+
+
