@@ -1,7 +1,7 @@
 # RxStack Skeleton Application
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/dabcb9185119497c272d/maintainability)](https://codeclimate.com/github/rxstack/skeleton/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/dabcb9185119497c272d/test_coverage)](https://codeclimate.com/github/rxstack/skeleton/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f6e90ec8ea970b424179/maintainability)](https://codeclimate.com/github/rxstack/skeleton/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f6e90ec8ea970b424179/test_coverage)](https://codeclimate.com/github/rxstack/skeleton/test_coverage)
 [![Build Status](https://travis-ci.org/rxstack/skeleton.svg?branch=master)](https://travis-ci.org/rxstack/skeleton)
 
 > a fully-functional skeleton application that you can use for your new applications.
