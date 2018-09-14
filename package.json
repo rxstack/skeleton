@@ -18,14 +18,14 @@
   "main": "dist/index",
   "typings": "dist/index",
   "scripts": {
-    "prod": "npm install && npm run clean && npm run compile && NODE_ENV=production node ./dist/index.js",
-    "dev": "NODE_ENV=development nodemon & npm run watch",
-    "cli": "RXSTACK_CLI=true node ./dist/index.js --",
+    "prod": "npm install && npm run clean && npm run compile && set NODE_ENV=production && node ./dist/index.js",
+    "dev": "set NODE_ENV=development && nodemon & npm run watch",
+    "cli": "set RXSTACK_CLI=true && node ./dist/index.js --",
     "compile": "npm run clean && tsc -p .",
     "watch": "tsc -w -p .",
     "clean": "rm -rf dist",
     "lint": "tslint --project tsconfig.json --format stylish",
-    "mocha": "NODE_ENV=testing mocha --opts mocha.opts",
+    "mocha": "set NODE_ENV=testing && mocha --opts mocha.opts",
     "coverage": "nyc npm run mocha",
     "test": "npm run lint && npm run coverage"
   },
