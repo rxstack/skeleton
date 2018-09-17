@@ -1,5 +1,6 @@
 dist/
-logs/
+logs/*
+!logs/.gitkeep
 node_modules
 coverage
 html-report
