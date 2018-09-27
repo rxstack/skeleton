@@ -18,8 +18,8 @@
   "main": "dist/index",
   "typings": "dist/index",
   "scripts": {
-    "prod": "npm install && npm run clean && npm run compile && cross-env NODE_ENV=production node ./dist/index.js",
-    "dev": "cross-env NODE_ENV=development nodemon & npm run watch",
+    "prod": "cross-env NODE_ENV=production node npm install && npm run clean && npm run compile && ./dist/index.js",
+    "dev": "cross-env NODE_ENV=development npm run compile && nodemon & npm run watch",
     "cli": "cross-env RXSTACK_CLI=true node ./dist/index.js",
     "compile": "npm run clean && tsc -p .",
     "watch": "tsc -w -p .",
