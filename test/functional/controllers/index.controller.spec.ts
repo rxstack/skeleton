@@ -37,17 +37,9 @@ describe('Functional:Controllers:IndexController', () => {
       json: false
     };
 
-    await rp(options)
-      .then((response: IncomingMessage) => {
-        const headers = response.headers;
-        headers['x-powered-by'].should.be.equal('Express');
-        response['statusCode'].should.be.equal(200);
-      })
-      .catch((err: any) => {
-        // make sure test fails
-        true.should.be.false;
-      })
-    ;
+    const response: IncomingMessage = await rp(options);
+    response.headers['x-powered-by'].should.be.equal('Express');
+    response['statusCode'].should.be.equal(200);
   });
 
   it('should call socketio app_index', (done: Function) => {

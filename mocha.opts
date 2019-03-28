@@ -3,7 +3,7 @@
 --require should
 --full-trace
 --bail
---timeout 60000
+--exit
 test/**/*.spec.ts
 
 

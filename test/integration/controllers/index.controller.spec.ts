@@ -12,7 +12,6 @@ describe('Integration:Controllers:IndexController', () => {
   let injector: Injector;
   let kernel: Kernel;
 
-
   before(async () => {
     await app.start();
     injector = app.getInjector();

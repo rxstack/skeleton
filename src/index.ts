@@ -4,4 +4,4 @@ configuration.initialize(__dirname + '/environments');
 import {Application} from '@rxstack/core';
 import {APP_OPTIONS} from './app/APP_OPTIONS';
 
-new Application(APP_OPTIONS).start().catch(console.error);
+new Application(APP_OPTIONS).start();
