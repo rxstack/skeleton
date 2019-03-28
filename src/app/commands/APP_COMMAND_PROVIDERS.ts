@@ -1,5 +1,4 @@
-import {ProviderDefinition} from '@rxstack/core';
-import {COMMAND_REGISTRY} from '@rxstack/core';
+import {ProviderDefinition, COMMAND_REGISTRY} from '@rxstack/core';
 import {IndexCommand} from './index.command';
 
 export const APP_COMMAND_PROVIDERS: ProviderDefinition[] = [

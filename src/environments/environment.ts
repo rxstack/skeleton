@@ -1,4 +1,4 @@
-export const environment = {
+export const environment: any = {
   express_server: {
     host: '0.0.0.0'
   },

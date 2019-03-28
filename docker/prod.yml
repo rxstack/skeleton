@@ -5,6 +5,8 @@ services:
         command: npm run prod
         build:
             context: ./app
+            args:
+                node_env: production
         ports:
             - ${EXPRESS_PORT}:3000
             - ${SOCKETIO_PORT}:4000

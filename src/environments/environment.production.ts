@@ -1,6 +1,6 @@
 import {configuration} from '@rxstack/configuration';
 
-export const environment = {
+export const environment: any = {
   logger: {
     handlers: [
       {

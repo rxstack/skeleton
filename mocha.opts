@@ -1,9 +1,10 @@
+--require test/mocha.env.ts
 --require ts-node/register
 --require source-map-support/register
 --require should
 --full-trace
 --bail
---timeout 60000
+--exit
 test/**/*.spec.ts
 
 

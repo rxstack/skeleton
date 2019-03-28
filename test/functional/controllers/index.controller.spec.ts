@@ -1,17 +1,12 @@
-import 'reflect-metadata';
-import {configuration} from '@rxstack/configuration';
-configuration.initialize(configuration.getRootPath() + '/src/environments');
 import {Injector} from 'injection-js';
-import {APP_OPTIONS} from '../../../src/app/APP_OPTIONS';
-import {Application, ServerManager} from '@rxstack/core';
+import {ServerManager} from '@rxstack/core';
 import {IncomingMessage} from 'http';
+import {app} from '../../../src/app/app';
 
 const rp = require('request-promise');
 const io = require('socket.io-client');
 
 describe('Functional:Controllers:IndexController', () => {
-  // Setup application
-  const app = new Application(APP_OPTIONS);
   let injector: Injector;
   let httpHost: string;
   let wsHost: string;
@@ -37,17 +32,9 @@ describe('Functional:Controllers:IndexController', () => {
       json: false
     };
 
-    await rp(options)
-      .then((response: IncomingMessage) => {
-        const headers = response.headers;
-        headers['x-powered-by'].should.be.equal('Express');
-        response['statusCode'].should.be.equal(200);
-      })
-      .catch((err: any) => {
-        // make sure test fails
-        true.should.be.false;
-      })
-    ;
+    const response: IncomingMessage = await rp(options);
+    response.headers['x-powered-by'].should.be.equal('Express');
+    response['statusCode'].should.be.equal(200);
   });
 
   it('should call socketio app_index', (done: Function) => {
