@@ -18,7 +18,6 @@ RUN adduser --disabled-password --gecos "" app
 
 USER app
 
-
 WORKDIR /var/www/application
 
 RUN echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc

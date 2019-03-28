@@ -1,17 +1,12 @@
-import 'reflect-metadata';
-import {configuration} from '@rxstack/configuration';
-configuration.initialize(configuration.getRootPath() + '/src/environments');
 import {Injector} from 'injection-js';
-import {APP_OPTIONS} from '../../../src/app/APP_OPTIONS';
-import {Application, ServerManager} from '@rxstack/core';
+import {ServerManager} from '@rxstack/core';
 import {IncomingMessage} from 'http';
+import {app} from '../../../src/app/app';
 
 const rp = require('request-promise');
 const io = require('socket.io-client');
 
 describe('Functional:Controllers:IndexController', () => {
-  // Setup application
-  const app = new Application(APP_OPTIONS);
   let injector: Injector;
   let httpHost: string;
   let wsHost: string;

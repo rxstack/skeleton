@@ -9,9 +9,16 @@ export class IndexCommand extends AbstractCommand {
 
   command = 'index';
   describe = 'Just a sample command';
+  builder = (yargs: any) => {
+    yargs.option('n', {
+      describe: 'just a a sample parameter',
+      default: 'Guest',
+      type: 'string',
+      alias: 'name',
+    });
+  }
 
   async handler(argv: any): Promise<void> {
-    console.log(argv);
-    console.log(chalk.green('Hello from RxStack CLI'));
+    console.log(chalk.blue(`Hello ${argv.name} -`), chalk.green('Welcome RxStack CLI'));
   }
 }

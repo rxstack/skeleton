@@ -1,14 +1,9 @@
-import 'reflect-metadata';
-import {configuration} from '@rxstack/configuration';
-configuration.initialize(configuration.getRootPath() + '/src/environments');
-import {Application, CommandManager} from '@rxstack/core';
-import {APP_OPTIONS} from '../../../src/app/APP_OPTIONS';
+import {CommandManager} from '@rxstack/core';
+import {app} from '../../../src/app/app';
 
 const sinon = require('sinon');
 
 describe('Functional:Commands:IndexCommand', () => {
-  // Setup application
-  const app = new Application(APP_OPTIONS);
   let consoleSpy: any;
 
   before(async () => {

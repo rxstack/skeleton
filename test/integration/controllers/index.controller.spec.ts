@@ -1,14 +1,9 @@
 import 'reflect-metadata';
-import {configuration} from '@rxstack/configuration';
-configuration.initialize(configuration.getRootPath() + '/src/environments');
 import {Injector} from 'injection-js';
-import {APP_OPTIONS} from '../../../src/app/APP_OPTIONS';
-import {Application, Kernel, Request, Response} from '@rxstack/core';
+import {Kernel, Request, Response} from '@rxstack/core';
+import {app} from '../../../src/app/app';
 
 describe('Integration:Controllers:IndexController', () => {
-
-  // Setup application
-  const app = new Application(APP_OPTIONS);
   let injector: Injector;
   let kernel: Kernel;
 

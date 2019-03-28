@@ -17,6 +17,5 @@ export const APP_OPTIONS: ApplicationOptions = {
     ...APP_EVENT_LISTENERS_PROVIDERS
   ],
   servers: environment.servers,
-  logger: environment.logger,
-  console: !!process.env.RXSTACK_CLI
+  logger: environment.logger
 };

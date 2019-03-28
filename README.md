@@ -34,7 +34,7 @@ For more details please visit the [official documentations](http://rxstack.io).
 - `$ npm run coverage` - runs tests with `nyc`
 - `$ npm test` - runs lint, mocha and coverage
 - `$ npm run cli` - runs command line applications
-- `$ npm run prod` - starts the application in production environment
+- `$ npm run prod` - starts the application from `dist` directory
 
 ## Docker
 
