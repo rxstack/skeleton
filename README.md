@@ -25,7 +25,7 @@ For more details please visit the [official documentations](http://rxstack.io).
 
 ## <a name="npm-scripts"></a> NPM scripts
 
-- `$ npm run dev` - starts the application in development environment with `nodemon`
+- `$ npm run dev` - starts `nodemon`
 - `$ npm run compile` - compiles the source code
 - `$ npm run watch` - watching for file changes
 - `$ npm run clean` - removes the `dist` directory
