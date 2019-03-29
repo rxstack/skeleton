@@ -25,7 +25,7 @@ For more details please visit the [official documentations](http://rxstack.io).
 
 ## <a name="npm-scripts"></a> NPM scripts
 
-- `$ npm run dev` - starts `nodemon`
+- `$ npm run dev` - compiles and starts `nodemon`
 - `$ npm run compile` - compiles the source code
 - `$ npm run watch` - watching for file changes
 - `$ npm run clean` - removes the `dist` directory
@@ -50,7 +50,7 @@ Docker version 18.09.0, build 4d60db4
 ```
 
 ```
-$ docker-compose -v
+$ docker -v
 docker-compose version 1.11.2, build dfed245
 ```
 

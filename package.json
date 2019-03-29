@@ -19,7 +19,7 @@
   "typings": "dist/index",
   "scripts": {
     "prod": "npm install && npm run clean && npm run compile && node ./dist/index.js",
-    "dev": "nodemon",
+    "dev": "npm run compile && nodemon",
     "cli": "ts-node ./src/cli.ts",
     "compile": "npm run clean && tsc -p .",
     "watch": "tsc -w -p .",
