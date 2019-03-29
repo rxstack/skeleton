@@ -50,7 +50,7 @@ Docker version 18.09.0, build 4d60db4
 ```
 
 ```
-$ docker -v
+$ docker-compose -v
 docker-compose version 1.11.2, build dfed245
 ```
 
