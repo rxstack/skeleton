@@ -1,6 +1,5 @@
 import {AbstractCommand} from '@rxstack/core';
 import {Injectable} from 'injection-js';
-import {configuration} from '@rxstack/configuration';
 
 const chalk = require('chalk');
 

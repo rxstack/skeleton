@@ -12,6 +12,3 @@ services:
             - ${SOCKETIO_PORT}:4000
         volumes:
             - ${APP_PATH}:/var/www/application
-
-
-
