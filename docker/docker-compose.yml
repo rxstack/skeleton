@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+    app:
+        container_name: app_dev
+        environment:
+            NODE_ENV: development
+            EXPRESS_PORT: ${EXPRESS_PORT}
+            SOCKETIO_PORT: ${SOCKETIO_PORT}
+        build:
+            context: ./app
+        ports:
+            - ${EXPRESS_PORT}:${EXPRESS_PORT}
+            - ${SOCKETIO_PORT}:${SOCKETIO_PORT}
+        volumes:
+            - ${APP_PATH}:/var/www/application
+
+
+
+
+
+
+

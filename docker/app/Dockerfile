@@ -5,7 +5,6 @@ ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER Nikolay Georgiev <symfonist@gmail.com>
 
 RUN apt-get update && apt-get install -y \
-    cron \
     software-properties-common \
     curl
 
@@ -21,9 +20,6 @@ USER app
 WORKDIR /var/www/application
 
 RUN echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc
-
-ARG node_env
-ENV NODE_ENV=$node_env
 
 
 

@@ -1,6 +1,5 @@
 import {AbstractCommand} from '@rxstack/core';
 import {Injectable} from 'injection-js';
-import {configuration} from '@rxstack/configuration';
 
 const chalk = require('chalk');
 
@@ -9,9 +8,10 @@ export class IndexCommand extends AbstractCommand {
 
   command = 'index';
   describe = 'Just a sample command';
+  /* istanbul ignore next */
   builder = (yargs: any) => {
     yargs.option('n', {
-      describe: 'just a a sample parameter',
+      describe: 'just a sample parameter',
       default: 'Guest',
       type: 'string',
       alias: 'name',
@@ -19,6 +19,6 @@ export class IndexCommand extends AbstractCommand {
   }
 
   async handler(argv: any): Promise<void> {
-    console.log(chalk.blue(`Hello ${argv.name} -`), chalk.green('Welcome RxStack CLI'));
+    console.log(chalk.blue(`Hello ${argv.name} -`), chalk.green('Welcome to RxStack CLI'));
   }
 }
