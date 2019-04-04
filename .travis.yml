@@ -10,6 +10,8 @@ cache:
 env:
   global:
     - CC_TEST_REPORTER_ID=fed499d92cda5dc352248450b918041edcf13d6db821bb32bd70becf94564576
+    - EXPRESS_PORT=3000
+    - SOCKETIO_PORT=4000
 
 before_install:
   - npm i -g npm@latest

@@ -7,7 +7,7 @@ export const environment: any = {
         type: 'file',
         options: {
           level: 'error',
-          filename: configuration.getRootPath() + '/logs/app.log'
+          filename: configuration.getRootPath() + '/logs/app.error'
         }
       }
     ]

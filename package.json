@@ -18,11 +18,11 @@
   "main": "dist/index",
   "typings": "dist/index",
   "scripts": {
-    "prod": "npm install && npm run clean && npm run compile && node ./dist/index.js",
     "dev": "npm run compile && nodemon",
-    "cli": "ts-node ./src/cli.ts",
-    "compile": "npm run clean && tsc -p .",
-    "watch": "tsc -w -p .",
+    "cli": "node ./dist/cli.js",
+    "cli-dev": "ts-node ./src/cli.ts",
+    "compile": "npm run clean && ./node_modules/typescript/bin/tsc -p .",
+    "watch": "./node_modules/typescript/bin/tsc -w -p .",
     "clean": "rm -rf dist",
     "lint": "tslint --project tsconfig.json --format stylish",
     "mocha": "mocha --opts mocha.opts",
@@ -36,7 +36,6 @@
     "@rxstack/exceptions": "^0.2",
     "@rxstack/express-server": "^0.2",
     "@rxstack/socketio-server": "^0.2",
-    "@types/express": "^4.16.1",
     "chalk": "^2.4.2",
     "cors": "^2.8.5",
     "express": "^4.16.4",
@@ -46,6 +45,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
+    "@types/express": "^4.16.1",
     "@types/lodash": "^4.14.123",
     "@types/mocha": "^2.2.48",
     "@types/node": "^11.12.0",
@@ -79,6 +79,9 @@
   "nyc": {
     "extension": [
       ".ts"
+    ],
+    "exclude": [
+      "test/*"
     ],
     "reporter": [
       "text-summary",
