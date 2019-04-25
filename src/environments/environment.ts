@@ -1,6 +1,10 @@
 export const environment: any = {
-  express_server: { },
-  socketio_server: { },
+  express_server: {
+    host: '0.0.0.0'
+  },
+  socketio_server: {
+    host: '0.0.0.0'
+  },
   servers: ['express', 'socketio'],
   logger: {
     handlers: [
