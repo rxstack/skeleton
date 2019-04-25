@@ -19,6 +19,7 @@ export class IndexCommand extends AbstractCommand {
   }
 
   async handler(argv: any): Promise<void> {
-    console.log(chalk.blue(`Hello ${argv.name} -`), chalk.green('Welcome to RxStack CLI'));
+    const name = argv.name || 'Guest';
+    console.log(chalk.blue(`Hello ${name} -`), chalk.green('Welcome to RxStack CLI'));
   }
 }
