@@ -8,5 +8,4 @@ npm-debug.log
 coverage.json
 .nyc_output/
 *.iml
-.env
 .idea/
