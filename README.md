@@ -13,12 +13,14 @@ For more details please visit the [official documentations](https://github.com/r
 - `src` - all your code lives here
     - `index.ts` - application entry file
     - `cli.ts` - CLI entry file
+    - `worker.ts` - worker entry file
     - `app` - application related files
         - `app.ts` - application instance.
         - `APPLICATION_OPTIONS.ts` - all application configurations [read more](https://github.com/rxstack/rxstack/blob/master/packages/core/docs/application.md).
         - `commands` - command line application files [read more](https://github.com/rxstack/rxstack/blob/master/packages/core/docs/console.md).
         - `controllers` - all your controller files [read more](https://github.com/rxstack/rxstack/blob/master/packages/core/docs/kernel.md).
         - `event-listeners` - all your event listener files [read more](https://github.com/rxstack/rxstack/blob/master/packages/async-event-dispatcher).
+        - `workers` - worker tasks [read more](https://github.com/rxstack/rxstack/blob/master/packages/worker-threads-pool).
     - `environments` - configuration files [read more](https://github.com/rxstack/rxstack/tree/master/packages/configuration).
 - `test` - all tests files
 - `static` - all static files
