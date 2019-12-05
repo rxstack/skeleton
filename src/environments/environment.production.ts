@@ -7,16 +7,5 @@ export const environment: any = {
     path: configuration.getRootPath() + '/dist/worker.js',
     max: maxWorkers,
     maxWaiting: maxWorkers * 10
-  },
-  logger: {
-    handlers: [
-      {
-        type: 'file',
-        options: {
-          level: 'error',
-          filename: configuration.getRootPath() + '/logs/error.log'
-        }
-      }
-    ]
-  },
+  }
 };

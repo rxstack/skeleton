@@ -1,6 +1,7 @@
 import {Injectable, Injector} from 'injection-js';
-import {Http, InjectorAwareInterface, Logger, Request, Response, WebSocket} from '@rxstack/core';
+import {Http, InjectorAwareInterface, Request, Response, WebSocket} from '@rxstack/core';
 import {configuration} from '@rxstack/configuration';
+import * as winston from 'winston';
 
 const fs = require('fs');
 
@@ -17,7 +18,7 @@ export class IndexController implements InjectorAwareInterface {
   @WebSocket('app_index')
   async indexAction(request: Request): Promise<Response> {
     const response = new Response();
-    this.injector.get(Logger).debug('Debugging indexAction', {'source': this.constructor.name});
+    winston.debug('Debugging indexAction', {'controller': 'index'});
     if (request.transport === 'HTTP') {
       response.content = fs.createReadStream(configuration.getRootPath() + '/static/welcome.html');
       response.headers.set('content-type', 'text/html');

@@ -20,6 +20,5 @@ export const APP_OPTIONS: ApplicationOptions = {
     ...APP_CONTROLLER_PROVIDERS,
     ...APP_EVENT_LISTENERS_PROVIDERS
   ],
-  servers: environment.servers,
-  logger: environment.logger
+  servers: environment.servers
 };

@@ -8,15 +8,5 @@ export const environment: any = {
     max: 1,
     maxWaiting: 2
   },
-  servers: ['express', 'socketio'],
-  logger: {
-    handlers: [
-      {
-        type: 'console',
-        options: {
-          level: 'silly',
-        }
-      }
-    ]
-  }
+  servers: ['express', 'socketio']
 };
