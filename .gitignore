@@ -1,5 +1,4 @@
 dist/
-logs/*
 !logs/.gitkeep
 node_modules
 coverage
