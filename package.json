@@ -1,6 +1,6 @@
 {
   "name": "RxStackSkeletonApplication",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "RxStack Skeleton - a fully functional application that you can use as the skeleton for your new applications.",
   "private": true,
   "author": "Nikolay Georgiev <symfonist@gmail.com>",
@@ -32,26 +32,26 @@
   "dependencies": {
     "@rxstack/async-event-dispatcher": "^0.5",
     "@rxstack/configuration": "^0.5",
-    "@rxstack/core": "^0.5",
+    "@rxstack/core": "^0.6",
     "@rxstack/exceptions": "^0.5",
-    "@rxstack/express-server": "^0.5",
+    "@rxstack/express-server": "^0.6",
     "@rxstack/service-registry": "^0.5",
-    "@rxstack/socketio-server": "^0.5",
-    "@rxstack/worker-threads-pool": "^0.5",
+    "@rxstack/socketio-server": "^0.6",
+    "@rxstack/worker-threads-pool": "^0.6",
     "chalk": "^2.4.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "injection-js": "^2.2.2",
+    "injection-js": "^2.3.0",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^2.3.0",
     "winston": "^3.2"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.6",
+    "@types/chai": "^4.2.8",
     "@types/express": "^4.17.2",
     "@types/lodash": "^4.14.149",
     "@types/mocha": "^2.2.48",
-    "@types/node": "^12.12.14",
+    "@types/node": "^12.12.26",
     "@types/serve-static": "^1.13.3",
     "@types/sinon": "^5.0.7",
     "chai": "3.5.0",
@@ -65,9 +65,9 @@
     "sinon": "^6.3.5",
     "socket.io-client": "^2.3.0",
     "source-map-support": "^0.4.15",
-    "ts-node": "^8.5.4",
+    "ts-node": "^8.6.2",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.5"
   },
   "bugs": {
     "url": "https://github.com/rxstack/skeleton/issues"
