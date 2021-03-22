@@ -2,10 +2,11 @@ language: node_js
 node_js:
   - "12"
   - "13"
+  - "14"
+  - "15"
 cache:
   directories:
     - "node_modules"
-
 env:
   global:
     - CC_TEST_REPORTER_ID=fed499d92cda5dc352248450b918041edcf13d6db821bb32bd70becf94564576

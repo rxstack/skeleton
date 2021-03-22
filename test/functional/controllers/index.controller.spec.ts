@@ -1,9 +1,8 @@
 import {Injector} from 'injection-js';
 import {ServerManager} from '@rxstack/core';
-import {IncomingMessage} from 'http';
 import {app} from '../../../src/app/app';
 
-const rp = require('request-promise');
+const fetch = require('node-fetch');
 const io = require('socket.io-client');
 
 describe('Functional:Controllers:IndexController', () => {
@@ -26,15 +25,10 @@ describe('Functional:Controllers:IndexController', () => {
   });
 
   it('should call express app_index', async () => {
-    const options = {
-      uri: httpHost,
-      resolveWithFullResponse: true,
-      json: false
-    };
-
-    const response: IncomingMessage = await rp(options);
-    response.headers['x-powered-by'].should.be.equal('Express');
-    response['statusCode'].should.be.equal(200);
+    const response: any = await fetch(httpHost);
+    const headers: any = response.headers;
+    headers.get('x-powered-by').should.be.equal('Express');
+    response.status.should.be.equal(200);
   });
 
   it('should call socketio app_index', (done: Function) => {
