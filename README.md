@@ -1,5 +1,6 @@
 # RxStack Skeleton Application
 
+[![Node.js CI](https://github.com/rxstack/skeleton/actions/workflows/node.js.yml/badge.svg)](https://github.com/rxstack/skeleton/actions/workflows/node.js.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f6e90ec8ea970b424179/maintainability)](https://codeclimate.com/github/rxstack/skeleton/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f6e90ec8ea970b424179/test_coverage)](https://codeclimate.com/github/rxstack/skeleton/test_coverage)
 
