@@ -1,7 +1,6 @@
-import {Injector} from 'injection-js';
 import {ServerManager} from '@rxstack/core';
 import {app} from '../../../src/app/app';
-
+import {Injector} from 'injection-js';
 const fetch = require('node-fetch');
 const io = require('socket.io-client');
 
