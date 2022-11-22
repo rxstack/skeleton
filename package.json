@@ -44,7 +44,7 @@
     "express": "^4.17.2",
     "injection-js": "^2.4.0",
     "reflect-metadata": "^0.1.13",
-    "socket.io": "^4.4.1",
+    "socket.io": "^4.5.3",
     "winston": "^3.5.1"
   },
   "devDependencies": {
