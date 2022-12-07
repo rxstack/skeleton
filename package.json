@@ -41,7 +41,7 @@
     "@rxstack/worker-threads-pool": "^0.7",
     "chalk": "^4.1.2",
     "cors": "^2.8.5",
-    "express": "^4.17.2",
+    "express": "^4.18.2",
     "injection-js": "^2.4.0",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^4.4.1",
