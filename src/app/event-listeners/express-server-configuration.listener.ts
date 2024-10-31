@@ -14,7 +14,7 @@ export class ExpressServerConfigurationListener {
     if (event.server.getName() === ExpressServer.serverName) {
       const app: Application = event.server.getEngine();
       app
-        .options('*', cors())
+        .options('/', cors())
         .use(cors())
       ;
     }

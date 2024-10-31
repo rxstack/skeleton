@@ -1,3 +1,4 @@
+import {describe, expect, it, beforeAll, afterAll} from '@jest/globals';
 import {app} from '../../../src/app/app';
 import {Injector} from 'injection-js';
 import {WorkerThreadsPool} from '@rxstack/worker-threads-pool';
@@ -6,12 +7,12 @@ describe('Functional:Workers:IndexWorker', () => {
   let injector: Injector;
   let pool: WorkerThreadsPool;
 
-  before(async () => {
+  beforeAll(async () => {
     injector = await app.run();
     pool = injector.get(WorkerThreadsPool);
   });
 
-  after(async () => {
+  afterAll(async () => {
     pool.terminate();
   });
 

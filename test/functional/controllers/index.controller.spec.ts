@@ -1,3 +1,4 @@
+import {describe, expect, it, beforeAll, afterAll} from '@jest/globals';
 import {ServerManager} from '@rxstack/core';
 import {app} from '../../../src/app/app';
 import {Injector} from 'injection-js';
@@ -10,7 +11,7 @@ describe('Functional:Controllers:IndexController', () => {
   let wsHost: string;
   let conn: any;
 
-  before(async () => {
+  beforeAll(async () => {
     await app.start();
     injector = app.getInjector();
     httpHost = injector.get(ServerManager).getByName('express').getHost();
@@ -18,7 +19,7 @@ describe('Functional:Controllers:IndexController', () => {
     conn = io(wsHost, {transports: ['websocket']});
   });
 
-  after(async () => {
+  afterAll(async () => {
     await conn.close();
     await app.stop();
   });
@@ -26,14 +27,14 @@ describe('Functional:Controllers:IndexController', () => {
   it('should call express app_index', async () => {
     const response: any = await fetch(httpHost);
     const headers: any = response.headers;
-    headers.get('x-powered-by').should.be.equal('Express');
-    response.status.should.be.equal(200);
+    expect(headers.get('x-powered-by')).toBe('Express');
+    expect(response.status).toBe(200);
   });
 
   it('should call socketio app_index', (done: Function) => {
     conn.emit('app_index', null, function (response: any) {
-      response['statusCode'].should.be.equal(200);
-      response['content'].should.be.equal('Welcome to RxStack Framework');
+      expect(response['statusCode']).toBe(200);
+      expect(response['content']).toBe('Welcome to RxStack Framework');
       done();
     });
   });
