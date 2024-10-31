@@ -24,8 +24,7 @@ For more details please visit the [official documentations](https://github.com/r
     - `environments` - configuration files [read more](https://github.com/rxstack/rxstack/tree/master/packages/configuration).
 - `test` - all tests files
 - `static` - all static files
-- `mocha.opts` - mocha options
-- `tslint.json` - typescript linter configuration
+- `eslint.config.mjs` - typescript linter configuration
 - `tsconfig.json` - typescript configuration  
 
 ## <a name="npm-scripts"></a> NPM scripts
@@ -34,10 +33,9 @@ For more details please visit the [official documentations](https://github.com/r
 - `$ npm run compile` - compiles the source code
 - `$ npm run watch` - watching for file changes
 - `$ npm run clean` - removes the `dist` directory
-- `$ npm run lint` - lints the source code using `tslint.json`
-- `$ npm run mocha` - runs tests using `mocha.opts`
-- `$ npm run coverage` - runs tests with `nyc`
-- `$ npm test` - runs lint, mocha and coverage
+- `$ npm run eslint` - lints with eslints
+- `$ npm run jest` - runs tests using jest
+- `$ npm test` - runs eslint, jest and coverage
 - `$ npm run cli` - runs command line applications from `dist` directory
 - `$ npm run cli-dev` - runs command line applications with `ts-node`
 
